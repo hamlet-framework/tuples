@@ -1,0 +1,18 @@
+language: php
+sudo: false
+
+php:
+  - '7.0'
+  - '7.1'
+  - '7.2'
+  - '7.3'
+  - '7.4'
+
+before_script:
+  - composer update
+
+script:
+  - ./vendor/bin/parallel-lint src
+  - php -v | grep -q 'PHP 7.0' || ./vendor/bin/psalm
+  - php -v | grep -q 'PHP 7.0' || ./vendor/bin/phpstan analyse src psalm-cases --level 1
+  - ./vendor/bin/phpcs --standard=PSR2 -n src

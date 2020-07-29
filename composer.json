@@ -1,0 +1,41 @@
+{
+  "name": "hamlet-framework/tuples",
+  "type": "library",
+  "description": "Hamlet Framework / Tuples",
+  "keywords": ["library", "typesafe tuples", "psalm"],
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Vasily Kartashov",
+      "email": "info@kartashov.com"
+    }
+  ],
+  "config": {
+    "optimize-autoloader": true,
+    "classmap-authoritative": true,
+    "sort-packages": true
+  },
+  "require": {
+    "php": ">=7"
+  },
+  "require-dev": {
+    "php-parallel-lint/php-parallel-lint": "@stable",
+    "phpstan/phpstan": "@stable",
+    "phpunit/phpunit": "@stable",
+    "squizlabs/php_codesniffer": "@stable",
+    "vimeo/psalm": "@stable"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hamlet\\Tuples\\": "src"
+    },
+    "files": [
+      "src/tuples.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Hamlet\\Tuples\\": "tests"
+    }
+  }
+}
