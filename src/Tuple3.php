@@ -3,6 +3,7 @@
 namespace Hamlet\Tuples;
 
 /**
+ * @psalm-immutable
  * @template T0
  * @template T1
  * @template T2

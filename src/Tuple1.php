@@ -3,6 +3,7 @@
 namespace Hamlet\Tuples;
 
 /**
+ * @psalm-immutable
  * @template T0
  */
 class Tuple1 extends Tuple
